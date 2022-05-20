@@ -61,7 +61,7 @@ Vue.createApp({
       {
         axios
           .get(
-            src="../artikel/artikel.json"
+            "https://raw.githubusercontent.com/sisiliaputri/Tekweb2022/main/artikel/artikel.json"
             )
           .then((res) => {
             console.log(res.data); //melihat respon data pada console browser
@@ -80,7 +80,7 @@ Vue.createApp({
         console.log(article);
         axios
           .get(
-            src="../artikel/"+article
+            "https://raw.githubusercontent.com/sisiliaputri/Tekweb2022/main/artikel/"+article
           )
           .then((res) => {
             var html = converter.makeHtml(res.data);           
