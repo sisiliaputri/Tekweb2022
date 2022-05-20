@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PortFolio C.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Font bellfair & Prata tambah lagi Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Prata&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <style>
+        .bacaan p{
+            font-size: 1.3rem;
+        }
+        .bacaan a{
+            color: rgb(0, 0, 0);
+        }
+        img{
+            width: 90%;
+            display: block;
+            margin: auto;
+        }
+        .card {
+            margin-top: 12px;
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+
+<body id="app">
+    <nav class="navbar navbar-expand-md bg-light fixed-top text-center bg-transparent">
+        <div class="container-fluid">
+            <!-- <p class="navbar-brand my-0 " href="#">Cicila</p> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header text-center">
+                    <h5 class="offcanvas-title mx-auto" id="offcanvasNavbarLabel">Menu hari ini</h5>
+                    <button type="button" class="bi bi-chevron-compact-up i-up position-absolute"
+                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body garis">
+                    <ul class="navbar-nav justify-content-center flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link fs-2" href="./index.html">Home</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="nama" class="container-fluid con pt-3">
+        <div class="row pt-5 h-100">
+            <div class="col-12 text-center">
+                <h2  class="heding pb-0 mb-0 mt-5">Artikel</h1>
+                <img class="img-fluid bunga-text" src="./aset-gambar/Bunga rustic.svg" alt="">
+                <p class="fs-4 mt-3 subjudul">Silahkan baca artikelnya yaa</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container-fluid  con-2">
+
+        <div class="container">
+            <section >
+                <div class="row">
+                    <div v-html="article" class="col-md-12 bacaan card">
+                        
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/vue@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.0.3/showdown.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

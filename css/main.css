@@ -1,0 +1,215 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;  
+}
+
+body {
+    --warna-utama: #212922;
+    --warna-kedua: #ff6565;
+    --warna-teks-terang: #fffae5;
+    --warna-teks-2: #fff1b5;
+    background-color: var(--warna-utama);
+    font-size: 1em;
+
+
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Bellefair', serif;
+}
+
+p,
+a,
+h5,
+h4,
+h6 {
+    font-family: 'Bellefair', serif;
+}
+
+.heding {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 4em;
+    color: var(--warna-utama);
+}
+
+.card {
+    background-color: var(--warna-teks-terang);
+    border-radius: 25px;
+    border: solid 4px var(--warna-utama);
+}
+
+.card-img-top {
+    border-radius: 18px;
+    border: solid 4px var(--warna-utama);
+}
+
+.card-footer {
+    background-color: #21292200;
+}
+
+.buton {
+    background-color: var(--warna-kedua);
+    width: 100%;
+    height: 95%;
+    border: solid 3px var(--warna-utama);
+    border-radius: 8px;
+}
+
+.card-header {
+    background-color: #21292200;
+}
+
+.lingkaran {
+
+    background-color: var(--warna-teks-2);
+    width: 90vw;
+    height: 90vw;
+    border: solid 5px var(--warna-utama);
+    border-radius: 50%;
+    left: 50%;
+    top: -58vw;
+    transform: translateX(-50%);
+    z-index: -2;
+    box-shadow: -11px 12px 33px 3px rgba(74, 73, 66, 0.59);
+    -webkit-box-shadow: -11px 12px 33px 3px rgba(74, 73, 66, 0.59);
+    -moz-box-shadow: -11px 12px 33px 3px rgba(74, 73, 66, 0.59);
+
+}
+
+.bng-1-ka,
+.bng-2-ka,
+.bng-3,
+.bng-2-ki,
+.bng-1-ki {
+    position: absolute;
+    bottom: 0;
+}
+
+.bng-1-ka {
+    left: 32%;
+}
+
+.bng-2-ka {
+    left: 38%;
+}
+
+.bng-3 {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bng-2-ki {
+    right: 38%;
+}
+
+.bng-1-ki {
+    right: 34%;
+}
+
+
+
+.navbar {
+    background-color: var(--warna-kedua) !important;
+    border-bottom: solid 5px var(--warna-utama);
+}
+
+.judul {
+    font-size: 9vmax;
+    letter-spacing: -10px;
+}
+
+.subjudul {
+    letter-spacing: 1px;
+}
+
+.navbar a,
+.navbar i {
+    transition: 350ms;
+    color: var(--warna-utama);
+    background-color: var(--warna-kedua);
+    font-size: 1.5em;
+}
+
+.navbar i {
+    transform: scale(1.1);
+    transition: 1200ms;
+    border-radius: 50%;
+}
+
+.navbar i:hover {
+    transform: scale(1.1) rotate(360deg);
+}
+
+.navbar a:hover {
+    transform: translateY(-20%);
+    color: var(--warna-teks-2);
+}
+
+.i-up {
+    border: none;
+    background-color: #21292200;
+    transform: scale(1.5) rotate(180deg);
+    transition: 600ms;
+}
+
+.i-up:hover {
+    transform: rotate(0deg) scale(2.5);
+}
+
+.garis::before {
+    content: " ";
+    width: 60%;
+    top: 50%;
+    left: 20%;
+    z-index: -1;
+    position: absolute;
+    border-bottom: solid 3px var(--warna-utama);
+    border-radius: 30px;
+
+}
+
+.offcanvas-body, .offcanvas-header {
+    background-color: var(--warna-kedua);
+}
+
+.con {
+    border: solid 5px var(--warna-utama);
+    border-radius: 0 0 3vmax 3vmax;
+}
+
+.con-1{
+    border: solid 5px var(--warna-utama);
+    border-radius: 3vmax 3vmax 0 0;
+    background-color: var(--warna-kedua);
+}
+.con-2{
+    border: solid 5px var(--warna-utama);
+    border-radius: 3vmax 3vmax;
+    background-color: var(--warna-kedua);
+}
+
+.form-floating{
+    background-color: var(--warna-teks-2) !important;
+}
+
+
+.con::before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -3;
+    background-color: var(--warna-teks-terang);
+    border-radius: 0 0 3.1vmax 3.1vmax;
+}
