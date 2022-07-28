@@ -70,9 +70,9 @@
     <div id="nama" class="container-fluid con pt-3" style="height: 100vh;">
         <div class="row pt-5 h-100">
             <div class="col-12 text-center">
-                <h1 class="judul pb-0 mb-0">{{header.nama}}</h1>
+                <h1 class="judul pb-0 mb-0">{{usr[0].nama}}</h1>
                 <img class="img-fluid bunga-text" src="./aset-gambar/Bunga rustic.svg" alt="">
-                <p class="fs-5 mt-5 subjudul">{{header.ket}}</p>
+                <p class="fs-5 mt-5 subjudul">{{usr[0].penjelasan}}</p>
             </div>
             <div class="col-12 align-self-end text-center">
                 <img class="px-2 bng-1-ka d-none d-xl-block" src="./aset-gambar/Bunga rustic 4 kiri.svg" alt="">
@@ -100,7 +100,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="(data, a) in tabel.tabel">
+                                    <tr v-for="(data, a) in por">
                                         <th style="width: 12px;">{{a+1}}</th>
                                         <td>{{data.ket}}</td>
                                     </tr>
@@ -117,7 +117,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="data in tabel.tabel">
+                                    <tr v-for="data in por">
                                         <td>{{data.skill}}</td>
                                     </tr>
                                 </tbody>
@@ -136,7 +136,7 @@
 
                     <div v-for="data in artikel" class="col-sm-4 mb-2">
                         <div class="card p-3 pb-0">
-                            <img :src="data.img" class="card-img-top" alt="...">
+                            <img :src="data.gambar" class="card-img-top" alt="...">
                             <div class="card-body p-0 pt-3">
                                 <div class="row w-100 p-0 m-0">
                                     <div class="col-12 p-0 m-0">
@@ -144,12 +144,12 @@
                                             <h5 class="card-title">{{data.judul}}</h5>
 
                                         </div>
-                                        <p class="card-text pt-1">By: {{data.penulis}}</p>
-                                        <p class="card-text pb-2">{{data.deskripsi}}</p>
+                                        <p class="card-text pt-1">By: {{data.oleh}}</p>
+                                        <p class="card-text pb-2">{{data.des}}</p>
 
                                     </div>
                                     <div class="col-12 pb-2 p-0 m-0 bet">
-                                        <a :href="'./read.html?article='+data.artikel" class="btn buton"
+                                        <a :href="'./read.html?article='+data.md" class="btn buton"
                                             type="button">BACA</a>
 
                                     </div>
@@ -157,7 +157,7 @@
                             </div>
                             <div class="card-footer p-0 pt-2">
                                 <i class="bi bi-bookmarks d-inline-block "></i>
-                                <p class="d-inline-block">{{data.tanggal}}</p>
+                                <p class="d-inline-block">{{data.tgl}}</p>
                             </div>
                         </div>
                     </div>
@@ -170,7 +170,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card p-3 h-100">
-                            <p class="fs-4 mb-0">{{tentang.deskripsi}}</p>
+                            <p class="fs-4 mb-0">{{usr[0].tentang}}</p>
                         </div>
                     </div>
                     <div class="col-md-8">

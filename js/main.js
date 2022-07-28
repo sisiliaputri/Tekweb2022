@@ -1,3 +1,4 @@
+let api = "https://ciciliaputrii.my.id/index.php/";
 Vue.createApp({
     data() {
       return {
@@ -52,6 +53,8 @@ Vue.createApp({
         },
 
         artikel: [],
+        por: [],
+        usr: [],
         article: null,
 
       };
@@ -61,11 +64,39 @@ Vue.createApp({
       {
         axios
           .get(
-            "https://raw.githubusercontent.com/sisiliaputri/Tekweb2022/main/artikel/artikel.json"
+            api+"arts"
             )
           .then((res) => {
             console.log(res.data); //melihat respon data pada console browser
             this.artikel = res.data; //memperbarui variabel article pada bagian data()
+          })
+          .catch((error) => {
+            console.log(error); //melihat error jika pengambilan data adalah gagal
+          });
+      },
+      getPortofolio()
+      {
+        axios
+          .get(
+            api+"pors"
+            )
+          .then((res) => {
+            console.log(res.data); //melihat respon data pada console browser
+            this.por = res.data; //memperbarui variabel article pada bagian data()
+          })
+          .catch((error) => {
+            console.log(error); //melihat error jika pengambilan data adalah gagal
+          });
+      },
+      getUser()
+      {
+        axios
+          .get(
+            api+"usrs"
+            )
+          .then((res) => {
+            console.log(res.data); //melihat respon data pada console browser
+            this.usr = res.data; //memperbarui variabel article pada bagian data()
           })
           .catch((error) => {
             console.log(error); //melihat error jika pengambilan data adalah gagal
@@ -80,7 +111,7 @@ Vue.createApp({
         console.log(article);
         axios
           .get(
-            "https://raw.githubusercontent.com/sisiliaputri/Tekweb2022/main/artikel/"+article
+            "https://github.com/sisiliaputri/Tekweb2022/blob/main/artikel/"+article
           )
           .then((res) => {
             var html = converter.makeHtml(res.data);           
@@ -94,6 +125,8 @@ Vue.createApp({
     },
     beforeMount() { 
       this.getArticle(),
+      this.getPortofolio(),
+      this.getUser(),
       this.getDataMarkdown()
     },
   }).mount("#app");
