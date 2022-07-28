@@ -1,0 +1,228 @@
+-API POINTS
+
+Users
+
+-Menampilkan user
+GET: /usrs
+response:
+[
+  {
+    "id":"",
+    "nama":"",
+    "penjelasan":"",
+    "tentang":""
+  },
+    ...
+]
+
+
+-Menampilkan user dengan ID
+GET: /usrs/[id]
+reponse:
+{
+    "nama":"",
+    "penjelasan":"",
+    "tentang":""
+}
+
+
+-Menambahkan user
+POST: /usr
+data:
+{
+    "nama":"",
+    "penjelasan":"",
+    "tentang":""
+}
+response:
+true    // if success
+false   // if failure
+
+
+-Mengedit user dengan ID
+PUT: /usr/[id]
+data:
+{
+    "nama":"",
+    "penjelasan":"",
+    "tentang":""
+}
+response:
+true    // if success
+false   // if failure
+
+
+-Menghapus user dengan ID
+DELETE: /usr/[id]
+response:
+true    // if success
+false   // if failure
+
+
+Artikel
+   
+-Menampilkan semua artikel
+GET: /arts
+response:
+[
+  {
+    "id":"",
+    "judul":"", 
+    "gambar":"", 
+    "oleh":"", 
+    "des":"", 
+    "tgl":"",
+    "md":""
+  },
+    ...
+]
+
+
+-Menampilkan artikel dengan ID
+GET: /arts/[id]
+response:
+{
+    "judul":"", 
+    "gambar":"", 
+    "oleh":"", 
+    "des":"", 
+    "tgl":"",
+    "md":""
+}
+
+
+-Menambahkan artikel
+POST: /art
+data:
+{
+    "judul":"", 
+    "gambar":"", 
+    "oleh":"", 
+    "des":"", 
+    "tgl":""
+    "md":""
+}
+response:
+true    // if success
+false   // if failure
+
+
+-Mengupdate artikel dengan ID
+PUT: /art/[id]
+data:
+{
+    "judul":"", 
+    "gambar":"", 
+    "oleh":"", 
+    "des":"", 
+    "tgl":"",
+    "md":""
+}
+response:
+true    // if success
+false   // if failure
+
+
+-Menghapus artikel dengan ID
+DELETE: /art/[id]
+response:
+true    // if success
+false   // if failure
+
+
+Portofolio
+
+-Menampilkan semua Portofolio
+GET: /pors
+response:
+[
+  {
+    "id":"",
+    "ket":"",
+    "skill":""
+  },
+  ...
+]
+
+
+-Menampilkan Portofolio with ID
+GET: /pors/[id]
+response:
+{
+    "ket":"",
+    "skill":""
+}
+
+
+-Menambahkan Portofolio
+POST: /por
+data:
+{
+    "ket":"",
+    "skill":""
+}
+response:
+true    // if success
+false   // if failure
+
+
+-Memperbarui Portofolio
+PUT: /por/[id]
+data:
+{
+    "ket":"",
+    "skill":""
+}
+response:
+true    // if success
+false   // if failure
+
+
+-Menghapus Portofolio 
+DELETE: /por/[id]
+response:
+true    // if success
+false   // if failure
+
+
+
+Desain Database
+berikut adalah desain dari API saya:
+
+mermaid
+classDiagram
+    class User{
+        # id: int
+        + nama: string
+        + penjelasan: string
+        + tentang: string
+        + getAllUser()
+        + getUserById()
+        + updateUser()
+        + createUser()
+        + deleteUser()
+    },
+    class Portofolio{
+        # id: int
+        + ket: string
+        + skill: string
+        + getAllPortofolio()
+        + getPortofolioById()
+        + updatePortofolio()
+        + createPortofolio()
+        + deletePortofolio()
+    },
+    class Artikel{
+        # id: int
+        + judul: string
+        + gambar: string
+        + oleh: string
+        + des: string
+        + tanggal: string
+        + md: string
+        + getAllArtikel()
+        + getArtikelById()
+        + updateArtikel()
+        + createArtikel()
+        + deleteArtikel()
+    }
